@@ -1,0 +1,13 @@
+# Cloudflare Pages Redirects Configuration
+# https://developers.cloudflare.com/pages/platform/redirects/
+
+# Redirect old paths (if any)
+# /old-path /new-path 301
+
+# Handle trailing slashes
+/privacy /privacy.html 200
+/terms /terms.html 200
+/home /index.html 200
+
+# SPA-style fallback for 404
+/* /404.html 404

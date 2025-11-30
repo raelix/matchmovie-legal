@@ -1,0 +1,21 @@
+{
+  "name": "MatchMovie",
+  "short_name": "MatchMovie",
+  "description": "Find the perfect movie to watch with friends",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#10B981",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["entertainment", "social"],
+  "lang": "it",
+  "dir": "ltr"
+}

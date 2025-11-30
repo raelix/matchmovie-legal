@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#10B981">
+    <link rel="icon" type="image/svg+xml" href="icon.png">
+    <title>Pagina Non Trovata - MatchMovie</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <span class="logo-icon">
+                    <img src="icon.png" alt="MatchMovie Logo" width="40" height="40">
+                </span>
+                <span>MatchMovie</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#features">Funzionalità</a></li>
+                <li><a href="index.html#about">Chi Siamo</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="terms.html">Termini</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 404 Content -->
+    <section class="hero" style="min-height: 80vh;">
+        <div class="hero-content">
+            <h1 style="font-size: 6rem; margin-bottom: 0;">404</h1>
+            <h2 style="margin-bottom: var(--spacing-lg);">Pagina Non Trovata</h2>
+            <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto var(--spacing-xl);">
+                Ops! La pagina che stai cercando non esiste o è stata spostata.
+                <br>È come cercare un film che non è mai stato prodotto! 🎬
+            </p>
+            <div class="cta-buttons">
+                <a href="index.html" class="btn btn-primary">
+                    🏠 Torna alla Home
+                </a>
+                <a href="index.html#contact" class="btn btn-secondary">
+                    📧 Contattaci
+                </a>
+            </div>
+
+            <div style="margin-top: var(--spacing-2xl);">
+                <h3 style="color: var(--text-secondary); font-size: 1.2rem; margin-bottom: var(--spacing-md);">
+                    Pagine Popolari:
+                </h3>
+                <div style="display: flex; gap: var(--spacing-md); justify-content: center; flex-wrap: wrap;">
+                    <a href="index.html" style="color: var(--primary);">Home</a>
+                    <span style="color: var(--border);">•</span>
+                    <a href="privacy.html" style="color: var(--primary);">Privacy Policy</a>
+                    <span style="color: var(--border);">•</span>
+                    <a href="terms.html" style="color: var(--primary);">Termini di Servizio</a>
+                    <span style="color: var(--border);">•</span>
+                    <a href="index.html#features" style="color: var(--primary);">Funzionalità</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Termini di Servizio</a>
+                <a href="index.html#contact">Contatti</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 MatchMovie. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            const isExpanded = menuToggle.classList.contains('active');
+            menuToggle.setAttribute('aria-expanded', isExpanded);
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('#navMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('nav')) {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
+</body>
+</html>

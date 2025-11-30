@@ -1,0 +1,15 @@
+# MatchMovie - robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap (update this URL with your actual domain)
+# Sitemap: https://yourdomain.com/sitemap.xml
+
+# Important pages
+Allow: /index.html
+Allow: /privacy.html
+Allow: /terms.html
+
+# Crawl-delay (optional, helps prevent server overload)
+Crawl-delay: 1
